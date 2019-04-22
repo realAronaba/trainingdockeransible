@@ -2,6 +2,11 @@
 - hosts: webservers
   become: yes
   tasks:
+    - name: Install pip
+      apt: name=python-pip state=present
+    - name: install docker-py package
+      pip: name=docker-py
+      
     - name: Running the container
       docker_container:
         name: "mywebserver"
