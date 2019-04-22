@@ -1,14 +1,14 @@
 ---
 - hosts: webservers
   become: yes
-        
-- name: Running the container
-  docker_container:
-    image: aronaba/mywebserver
-    image_version: "v1"
-    ports:
-      - "80:80"
-    state: running
-            
-- name: Check if container is running
-  shell: docker ps
+  tasks:
+    - name: Running the container
+      docker_container:
+        image: aronaba/mywebserver
+        image_version: "v1"
+        ports:
+          - "80:80"
+        state: running
+
+    - name: Check if container is running
+      shell: docker ps
