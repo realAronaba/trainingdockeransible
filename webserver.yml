@@ -8,7 +8,7 @@
         image: "aronaba/mywebserver:v1"
         ports:
           - "80:80"
-        state: running
+        state: started
 
     - name: Check if container is running
       shell: docker ps
