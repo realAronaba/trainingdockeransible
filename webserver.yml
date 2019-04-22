@@ -4,8 +4,7 @@
   tasks:
     - name: Running the container
       docker_container:
-        image: aronaba/mywebserver
-        image_version: "v1"
+        image: "aronaba/mywebserver:v1"
         ports:
           - "80:80"
         state: running
