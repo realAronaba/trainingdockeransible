@@ -17,6 +17,8 @@
       docker_container:
         name: "mywebserver"
         image: "aronaba/mywebserver:v1"
+        devices:
+          - "/home/docker/vol_shared:/data"
         ports:
           - "8070:80"
         state: started
