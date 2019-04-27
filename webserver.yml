@@ -23,5 +23,3 @@
           - "8070:80"
         state: started
 
-    - name: Check if container is running
-      shell: docker ps
